@@ -1,7 +1,6 @@
 from waitress import serve
 
 def render_template(template_name='index.html', context={}):
-
     html_str=""
     with open(template_name, 'r') as f:
         html_str=f.read()
@@ -31,7 +30,6 @@ def app(environ, start_response):
     start_response(
         f"200 OK", [
             ("Content-type", "text/html"),
-            ("Content-Lenght", str(len("abc")))
         ]
     )
     return iter([data])
