@@ -32,23 +32,10 @@ def get_products_from_db():
             connection.close()
     except Exception as e:
         print(f"Failed to get products from db: {e}")
+        
     
-    return products
+    return json.dumps(products)
 
-def generate_product_cards(products):
-    html = ""
-    for product in products:
-        html += f"""
-        <div class="card">
-            <img src="{product['image']}" alt="{product['model']}">
-            <div class="card-content">
-                <h2 class="card-title">{product['model']}</h2>
-                <p class="card-description">{product['description']}</p>
-                <p class="card-price">{product['price']}</p>
-                <a href="/product/{product['id']}" class="btn">Подробнее</a>
-            </div>
-        </div>
-        """
-    return html
+
 
    

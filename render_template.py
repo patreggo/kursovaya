@@ -6,7 +6,6 @@ def render_template(template_name, context={}):
         html_str = f.read()
         html_str = html_str.format(**context)
             
-
     content_type, _ = mimetypes.guess_type(template_name)
     if content_type is None:
         

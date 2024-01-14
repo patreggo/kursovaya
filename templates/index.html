@@ -14,26 +14,27 @@
         <nav>
             <a href="#">Главная</a>
             <a href="#">Товары</a>
-            <a href="#">Контакты</a>
+            <a href="/contact">О нас</a>
         </nav>
-        <div class="cart">
-            <a href="#">Cart</a>
-        </div>
+        
     </div>
 </header>
 
 <div class="container">
-    <div class="categories">
-        <button class="category-btn">Категория</button>
-        <button class="category-btn">Категория</button>
-        <button class="category-btn">Категория</button>
-    </div>
-
+    
     <div class="product-cards">
-        {product_cards}
+        
+    </div>
+    <div id="cart-container">
+        <h2>Корзина товаров</h2>
+        
+        <div id="cart-items"></div>
+        <p id="total-price">Итоговая сумма: $0</p>
+        <button id="checkout-button" style="display: none;">Оформить</button>
     </div>
    
     
+    <script src="/src/js/index.js"></script>
 </body>
 </html>
     

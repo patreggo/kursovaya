@@ -2,8 +2,8 @@ from templates_view.base_view import View
 from render_template import render_template
 
 
-class HomeView(View):
-    template = 'templates/index.html'
+class CheckoutView(View):
+    template = 'templates/checkout.html'
     
     def get(self, environ):
         
