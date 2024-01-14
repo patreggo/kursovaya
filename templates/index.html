@@ -12,8 +12,6 @@
     <div class="container">
         <h1>Онлайн магазин</h1>
         <nav>
-            <a href="#">Главная</a>
-            <a href="#">Товары</a>
             <a href="/contact">О нас</a>
         </nav>
         
@@ -21,17 +19,18 @@
 </header>
 
 <div class="container">
-    
-    <div class="product-cards">
-        
+    <div class="content">
+        <div class="product-cards">
+           
+        </div>
+        <div id="cart-container">
+            <h2>Корзина товаров</h2>
+            <div id="cart-items"></div>
+            <p id="total-price">Итоговая сумма: $0</p>
+            <button id="checkout-button" style="display: none;">Оформить</button>
+        </div>
     </div>
-    <div id="cart-container">
-        <h2>Корзина товаров</h2>
-        
-        <div id="cart-items"></div>
-        <p id="total-price">Итоговая сумма: $0</p>
-        <button id="checkout-button" style="display: none;">Оформить</button>
-    </div>
+</div>
    
     
     <script src="/src/js/index.js"></script>

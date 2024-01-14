@@ -1,4 +1,12 @@
-// checkout.js
+function setCookie(name, value, days) {
+    let expires = "";
+    if (days) {
+        let date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
 
 function readCookie(name) {
     const nameEQ = name + "=";
@@ -15,32 +23,27 @@ document.addEventListener('DOMContentLoaded', function () {
     const cartItemsContainer = document.getElementById('cart-items');
     const confirmOrderBtn = document.getElementById('confirm-order-btn');
 
-    // Fetch items from the shopping cart
+    
     const savedBin = readCookie('bin');
     const bin = savedBin ? JSON.parse(decodeURIComponent(savedBin)) : [];
     updateCart();
 
     confirmOrderBtn.addEventListener('click', function () {
-        // Implement logic to send the order to the server and update the database
-
-        // Show a confirmation message
-        alert('Thank you for your order!');
-
-        // Clear the shopping cart
+        alert('Спасибо за заказ!');
         bin.length = 0;
         updateCart();
-        setCookie('bin', '', -1); // Remove the 'bin' cookie
+        setCookie('bin', '', -1); 
 
-        // Redirect to a thank you page if needed
-        window.location.href = '/thank-you'; // Replace with the desired URL
+        
+        window.location.href = '/'; 
     });
 
     function updateCart() {
-        // Clear existing items in the cart container
+        
         cartItemsContainer.innerHTML = '';
         const totalPriceElement = document.getElementById('total-price');
         let totalPrice = 0;
-        // Display items from the shopping cart on the checkout page
+        
         bin.forEach((item, index) => {
             const cartItem = document.createElement('div');
             cartItem.classList.add('cart-item');

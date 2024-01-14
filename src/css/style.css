@@ -44,6 +44,7 @@ nav a {
 }
 
 .product-cards {
+    flex:1 ;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -108,16 +109,19 @@ nav a {
 }
 
 #cart-container {
-    max-width: 600px;
+
+    min-width: 500px;
     margin: 0 auto;
 }
 
 .cart-item {
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
     margin-bottom: 10px;
     padding: 10px;
     display: flex;
     justify-content: space-between;
+    
+
 }
 
 .remove-btn {
@@ -166,4 +170,9 @@ nav a {
 
 .location-details p {
     color: #555;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
 }

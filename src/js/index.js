@@ -32,7 +32,7 @@
             }
         } catch (error) {
             console.error("Error parsing JSON:", error);
-            // Handle the error as needed
+           
         }
     };
 
@@ -86,18 +86,18 @@ fetch('/api/products')
     function addToCart(product) {
 
         
-        // Проверяем, есть ли уже такой продукт в корзине 
+        
         const existingProduct = bin.find(item => item.id === product.id); 
  
         if (existingProduct) { 
-            // Если продукт уже есть, увеличиваем количество 
+            
             if (existingProduct.count >= product.count) {
                 alert('Вы не можете добавить больше товаров, чем есть в наличии');
                 return;
             }
             existingProduct.count += 1; 
         } else { 
-            // Иначе добавляем новый продукт в корзину 
+           
             bin.push({ id: product.id, model: product.model, description: product.description, price: product.price, count: 1 }); 
         } 
  
@@ -121,24 +121,31 @@ fetch('/api/products')
         bin.forEach((item, index) => {
 
             console.log(item);
-            const itemQuantity = document.createElement('span'); 
+            const itemQuantity = document.createElement('span');
+            itemQuantity.style.marginRight = '10px'; 
             itemQuantity.textContent = 'Количество: ' + item.count;
 
             const cartItem = document.createElement('div');
+            cartItem.style.marginRight = '10px'; 
             cartItem.classList.add('cart-item');
 
             const itemName = document.createElement('span');
+            itemName.style.marginRight = '10px';
             itemName.textContent = item.model;
 
             const itemPrice = document.createElement('span');
+            itemPrice.style.marginRight = '10px';
             itemPrice.textContent = '₽' + item.price;
 
             const removeBtn = document.createElement('span');
+            removeBtn.style.marginRight = '10px';
             removeBtn.classList.add('remove-btn');
             removeBtn.textContent = 'Удалить';
             removeBtn.addEventListener('click', function () {
                 removeFromCart(index);
             });
+
+        
 
             
 
@@ -162,7 +169,7 @@ fetch('/api/products')
         }
 
         document.getElementById('checkout-button').addEventListener('click', function() {
-            window.location.href = '/checkout'; // replace 'checkout.html' with your checkout page URL
+            window.location.href = '/checkout'; 
         });
 
         totalPriceElement.textContent = 'Итоговая сумма: ₽' + totalPrice;
