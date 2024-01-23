@@ -7,7 +7,7 @@ host = "localhost"
 user = "admin"
 password = "PaulLizzka2002!"
 db_name = "shop"
-
+#Таблица кроссовок
 def get_products_from_db():
     products = []
     try:
@@ -36,6 +36,7 @@ def get_products_from_db():
     
     return json.dumps(products)
 
+#Таблица заказов
 def create_order(models, total_price, count, name_user, address_user, mail_user):
     try:
         connection = pymysql.connect(

@@ -1,6 +1,6 @@
 import mimetypes
 
-
+#Отображение html страницы
 def render_template(template_name, context={}):
     with open(template_name, 'r', encoding='utf-8') as f:
         html_str = f.read()
