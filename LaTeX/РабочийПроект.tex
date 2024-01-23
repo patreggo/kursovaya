@@ -12,70 +12,40 @@
 \caption*{Продолжение таблицы \ref{class:table}}\\
 \hline \centrow 1 & \centrow 2 & \centrow 3 & \centrow 4\\ \hline
 \finishhead
-CMain & Главный модуль & CMain – главный класс страницы web-приложения. После одного из этапов по загрузке страницы в сценарии становится доступным инициализированный системой объект данного класса с именем \$APPLICATION & void ShowTitle(string property\_code = «title», bool strip\_tags = true)
-Выводит заголовок страницы
-void SetTitle(string title)
-Устанавливает заголовок страницы
-
-void ShowCSS(bool external = true, bool XhtmlStyle = true)
-Выводит таблицу стилей CSS страницы\\
-\hline CFile & Главный модуль & CFile – Класс для работы с файлами и изображениями & array GetFileArray (int file\_id)
-Метод возвращает массив, содержащий описание файла (путь к файлу, имя файла, размер) с идентификатором file\_id
+HomeView & Главный модуль & HomeViev – Класс представляет собой представление главной страницы. & def get(self, environ) Метод обрабатывает GET-запросы к главной странице.
+Выводит заголовок страницы\\
+\hline ContactUsView & Главный модуль & ContactUsView – Класс представляет собой представление страницы " О нас ". & def get(self, environ) Метод обрабатывает GET-запросы к странице " О нас ".
+\hline CheckoutView & Главный модуль & CheckoutView – Класс представляет собой представление страницы оформления заказа. & def get(self, environ) Метод обрабатывает GET-запросы к странице оформления заказа.
+\hline ProductView & Главный модуль & ProductView – Класс представляет собой представление страницы продукта. & def get(self, environ) Метод обрабатывает GET-запросы к странице продукта.
+\hline View & Главный модуль & View – Базовый класс для представлений веб-страниц. & def get(self, environ) Абстрактный метод для обработки GET-запросов.
 \end{xltabular}
+
 \renewcommand{\arraystretch}{1.0} % восстановление сетки
 
-\subsection{Модульное тестирование разработанного web-сайта}
-
-Модульный тест для класса User из модели данных представлен на рисунке \ref{unitUser:image}.
-
-\begin{figure}[ht]
-\begin{lstlisting}[language=Python]
-from django.test import TestCase
-from .models import *
-User = get_user_model()
-
-
-class ShpoTestCases(TestCase):
-
-    def setUp(self) -> None:
-        self.user = User.objects.create(username='testtestovich', password='testtestovich', first_name='Sad', last_name='')
-
-    def test_2(self):
-
-        self.assertEqual(self.user.first_name, 'Sad')
-        self.assertEqual(self.user.last_name, 'Cat')
-        print((self.user))
-        print((self.user.first_name))
-        print((self.user.last_name))
-\end{lstlisting}  
-\caption{Модульный тест класса User}
-\label{unitUser:image}
-\end{figure}
 
 \subsection{Системное тестирование разработанного web-сайта}
 
-На рисунке \ref{main:image} представлена главная страница сайта «Русатом – Аддитивные технологии».
-\newpage % при необходимости можно переносить рисунок на новую страницу
+На рисунке \ref{main:Главная} представлена главная страница сайта онлайн магазина кроссовок.
+
 \begin{figure}[H] % H - рисунок обязательно здесь, или переносится, оставляя пустоту
-\center{\includegraphics[width=1\linewidth]{main1}}
-\center{\includegraphics[width=1\linewidth]{main2}}
-\center{\includegraphics[width=1\linewidth]{main3}}
-\caption{Главная страница сайта «Русатом – Аддитивные технологии»}
-\label{main:image}
+\center{\includegraphics[width=1\linewidth]{Главная}}
+\caption{Главная страница сайта онлайн магазина кроссовок}
+\label{main:Главная}
 \end{figure}
 
-На рисунке \ref{menu:image} представлен динамический вывод заголовков, включающий в себя искомые фразы при поиске фраз.
 
+На рисунке \ref{menu:Вывод} представлен динамический вывод товара при нажатии на картинку.
 \begin{figure}[ht]
-\center{\includegraphics[width=1\linewidth]{menu}}
-\caption{Динамический вывод заголовков}
-\label{menu:image}
+\center{\includegraphics[width=1\linewidth]{Вывод}}
+\caption{Динамический вывод товара}
+\label{menu:Вывод}
 \end{figure}
 
-На рисунке \ref{enter:image} представлен ввод данных для публикации новости.
-
+\newpage
+На рисунке \ref{enter:Заказ} представлена страница оформления заказа.
 \begin{figure}[ht]
-\center{\includegraphics[width=1\linewidth]{enter}}
-\caption{Ввод данных для публикации очень-очень длинной, интересной и полезной новости}
-\label{enter:image}
+\center{\includegraphics[width=1\linewidth]{Заказ}}
+\caption{Страница оформления заказа}
+\label{enter:Заказ}
 \end{figure}
+

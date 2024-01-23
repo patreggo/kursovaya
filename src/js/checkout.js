@@ -1,5 +1,5 @@
 (function () {
-
+    
     function setCookie(name, value, days) {
         let expires = "";
         if (days) {
@@ -20,18 +20,21 @@
         }
         return null;
     }
+    // Получение элементов DOM
     const cartItemsContainer = document.getElementById('cart-items');
     const confirmOrderForm = document.getElementById('orderForm');
 
-
+    // Чтение сохраненных в cookie данных корзины
     const savedBin = readCookie('bin');
     const bin = savedBin ? JSON.parse(decodeURIComponent(savedBin)) : [];
     updateCart();
 
+    // Получение и декодирование данных корзины из cookie
     const binCookie = document.cookie.split(';').find(cookie => cookie.trim().startsWith('bin='));
     const binUserString = decodeURIComponent(binCookie.split('=')[1]);
     var binUser = JSON.parse(binUserString);
 
+    // Формирование строки с количеством каждой модели в корзине
     var resultStringCount = binUser.map(obj => `${obj.model}: ${obj.count}`).join(', ');
     console.log(resultStringCount);
 

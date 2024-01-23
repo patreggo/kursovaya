@@ -6,12 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="3a254fe4-a59e-4a9c-acba-4c2769da8a08" name="Changes" comment="Финальная версия">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaTeX/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/main.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaTeX/ТехЗадание.tex" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/ТехЗадание.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/connect.py" beforeDir="false" afterPath="$PROJECT_DIR$/db/connect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/render_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/render_template.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/checkout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/checkout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_view/base_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/templates_view/base_view.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_view/checkout_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/templates_view/checkout_view.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_view/contact_us_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/templates_view/contact_us_view.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_view/home_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/templates_view/home_view.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_view/product_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/templates_view/product_view.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_view/static_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/templates_view/static_view.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +79,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705998613504</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Финальная версия">
+      <option name="closed" value="true" />
+      <created>1706030873150</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706030873150</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
