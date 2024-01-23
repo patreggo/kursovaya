@@ -4,8 +4,8 @@ import base64
 import pymysql.cursors
 
 host = "localhost"
-user = "admin"
-password = "PaulLizzka2002!"
+user = "root"
+password = "vfczyz377283"
 db_name = "shop"
 #Таблица кроссовок
 def get_products_from_db():
@@ -37,7 +37,7 @@ def get_products_from_db():
     return json.dumps(products)
 
 #Таблица заказов
-def create_order(models, total_price, count, name_user, address_user, mail_user):
+def create_order(models, total_price, count, name_user, adress_user, mail_user):
     try:
         connection = pymysql.connect(
             host=host,
@@ -51,8 +51,8 @@ def create_order(models, total_price, count, name_user, address_user, mail_user)
 
         try:
             with connection.cursor() as cursor:
-                create_order_query = "INSERT INTO `orders` (`models`, `total_price`, `count`, `name_user`, `address_user` , `mail_user`) VALUES (%s, %s, %s, %s, %s, %s)"
-                cursor.execute(create_order_query, (models, total_price, count, name_user, address_user, mail_user))
+                create_order_query = "INSERT INTO `orders` (`models`, `total_price`, `count`, `name_user`, `adress_user` , `mail_user`) VALUES (%s, %s, %s, %s, %s, %s)"
+                cursor.execute(create_order_query, (models, total_price, count, name_user, adress_user, mail_user))
                 connection.commit()
                 print("Order created:", cursor.lastrowid)
         finally:

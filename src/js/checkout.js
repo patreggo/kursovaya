@@ -45,7 +45,7 @@
         let total_price = localStorage.getItem("totalPrice")
         let count = resultStringCount;
         let name_user = document.getElementById('nameUser').value
-        let address_user = document.getElementById('addressUser').value
+        let adress_user = document.getElementById('adressUser').value
         let mail_user = document.getElementById('mailUser').value
 
 
@@ -54,7 +54,7 @@
         formData.append('total_price', total_price);
         formData.append('count', count);
         formData.append('name_user', name_user);
-        formData.append('address_user', address_user);
+        formData.append('adress_user', adress_user);
         formData.append('mail_user', mail_user);
         console.log(formData)
         createOrder(formData);

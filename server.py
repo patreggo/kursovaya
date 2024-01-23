@@ -29,9 +29,9 @@ def app(environ, start_response):
             total_price = form.getvalue('total_price', '')
             count = form.getvalue('count', '')
             name_user = form.getvalue('name_user', '')
-            address_user = form.getvalue('address_user', '')
+            adress_user = form.getvalue('adress_user', '')
             mail_user = form.getvalue('mail_user', '')
-            create_order(models,total_price,count,name_user,address_user,mail_user)
+            create_order(models,total_price,count,name_user,adress_user,mail_user)
             start_response("200 OK", [("Content-type", "application/json")])
             return [b'{"status": "success"}']
 
