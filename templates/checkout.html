@@ -1,0 +1,38 @@
+<!-- checkout.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+
+<body>
+    <h1>Корзина</h1>
+
+    <div id="cart-items"></div>
+    <p id="total-price">Итоговая сумма: $0</p>
+    <section>
+        <h1>Оформить заказ</h1>
+        <form id="orderForm" action="/" method="post">
+            <label for="nameUser">Имя:</label>
+            <input type="text" id="nameUser" name="name_user" required><br>
+
+            <label for="addressUser">Адрес:</label>
+            <input type="text" id="addressUser" name="address_user" required><br>
+
+            <label for="mailUser">Почта:</label>
+            <input type="text" id="mailUser" name="mail_user" required><br>
+
+            <input type="submit" value="Подтвердить заказ">
+        </form>
+    </section>
+
+
+    <script src="/src/js/checkout.js"></script>
+</body>
+
+</html>
