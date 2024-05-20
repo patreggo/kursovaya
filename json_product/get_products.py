@@ -1,5 +1,6 @@
 from db.connect import get_products_from_db
 
+
 class GetProducts():
     def get(self, environ):
         data = get_products_from_db()
