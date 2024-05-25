@@ -1,9 +1,10 @@
 import cgi
 
 from db.connect import create_order
+from templates_view.base_view import View
 
 
-class OrderView():
+class OrderView(View):
     def post (self, environ):
         form = cgi.FieldStorage(fp=environ['wsgi.input'], environ=environ)
         models = form.getvalue('models', '')

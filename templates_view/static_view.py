@@ -1,6 +1,9 @@
 import mimetypes
 
-class StaticView:
+from templates_view.base_view import View
+
+
+class StaticView(View):
     def get(self, environ):
         path = environ.get('PATH_INFO', '')
         new_path = path.lstrip('/')
