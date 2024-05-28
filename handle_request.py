@@ -1,6 +1,5 @@
 import re
 
-from render_template import render_template
 from routes import urls
 
 
@@ -26,11 +25,8 @@ def handle_request(environ, start_response):
             view_class = view
             break
 
-    if view_class:
-        view_instance = view_class()
-        data, content_type = view_instance.handle(environ)
-    else:
-        data, content_type = render_template(template_name='templates/404.html', context={})
+    view_instance = view_class()
+    data, content_type = view_instance.handle(environ)
 
     data = data.encode("utf-8") if isinstance(data, str) else data
     start_response("200 OK", [("Content-type", content_type)])
