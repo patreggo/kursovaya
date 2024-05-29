@@ -1,6 +1,7 @@
 import cgi
 
 from db.connect import create_order
+from response import Response
 from templates_view.base_view import View
 
 
@@ -16,4 +17,4 @@ class OrderView(View):
 
         create_order(models, total_price, count, name_user, adress_user, mail_user)
 
-        return b'{"status": "success"}', "application/json"
+        return Response(data=b'{"status": "success"}', content_type="application/json", code=200)

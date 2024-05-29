@@ -1,8 +1,4 @@
-from abc import ABC, abstractmethod
-from render_template import render_template
-
-
-class View():
+class View:
     """
     Базовый класс для представлений веб-страниц.
 
@@ -25,7 +21,6 @@ class View():
         Должен быть реализован в каждом подклассе.
         """
         pass
-
 
     def post(self, environ):
         """
