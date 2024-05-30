@@ -1,8 +1,7 @@
-from response import Response
-from templates_view.base_view import View
-from render_template import render_template
+from templates_view.template_view import TemplateView
 
-class ContactUsView(View):
+
+class ContactUsView(TemplateView):
     """
     Класс представляет собой представление страницы " О нас ".
 
@@ -13,17 +12,4 @@ class ContactUsView(View):
     get(self, environ): Метод обрабатывает GET-запросы к странице " О нас ".
     """
     template = 'templates/contact.html'
-    
-    
-    def get(self, environ):
-        """
-        Метод обрабатывает GET-запросы к странице " О нас ".
 
-        Параметры:
-        environ (dict): Словарь, содержащий переменные окружения CGI.
-
-        Возвращает:
-        str: Возвращает HTML-страницу " О нас ".
-        """
-        data = render_template(template_name=self.template, context={})
-        return Response(data=data, content_type='text/html', code=200)
