@@ -14,6 +14,7 @@ class TemplateView(View):
     get(self, environ): Метод обрабатывает GET-запросы и возвращает HTML-страницу.
     """
     template = ''
+    status_code = 200
 
     def get(self, environ):
         """
@@ -26,4 +27,4 @@ class TemplateView(View):
         str: Возвращает HTML-страницу.
         """
         data = render_template(template_name=self.template, context={})
-        return Response(data=data, content_type='text/html', code=200)
+        return Response(data=data, content_type='text/html', code=self.status_code)

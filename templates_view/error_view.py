@@ -11,3 +11,4 @@ class ErrorView(TemplateView):
 
     """
     template = 'templates/404.html'
+    status_code = 404
