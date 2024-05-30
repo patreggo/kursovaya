@@ -16,4 +16,4 @@ class StaticView(View):
                 mime_type = 'application/octet-stream'
             return Response(data=content, content_type=mime_type, code=200)
         except FileNotFoundError:
-            return Response(data=b"404 Not Found", content_type="text/plain", code=200)
+            return Response(data=b"404 Not Found", content_type="text/plain", code=404)
